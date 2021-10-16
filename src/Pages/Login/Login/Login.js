@@ -5,8 +5,8 @@ import './Login.css'
 
 const Login = () => {
   return (
-    <div className="d-flex justify-content-center align-items-center form-container">
-      <Form className="w-25 text-start form">
+    <div className="d-flex row justify-content-center align-items-center form-container">
+      <Form className="col-lg-3 col-sm-5  text-start form">
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Email address</Form.Label>
           <Form.Control type="email" placeholder="Enter email" />
@@ -26,7 +26,7 @@ const Login = () => {
           Submit
         </Button>
         <div className="mt-3">
-            <h6><span>----------------</span>New user?<span>----------------</span></h6>
+            <h6>New user?</h6>
             <Link to="/register"><button className="btn btn-outline-danger w-100 mt-2">Create new account</button></Link>
         </div>
       </Form>

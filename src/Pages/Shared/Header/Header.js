@@ -1,20 +1,23 @@
 import React from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 const Login = () => {
   return (
     <div>
-      <Navbar bg="dark" variant="dark">
+      <Navbar collapseOnSelect expand="lg" fixed="top" bg="dark" variant="dark">
         <Container>
-          <Navbar.Brand href="#home">Navbar</Navbar.Brand>
-          <Nav className="me-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#features">Features</Nav.Link>
-            <Nav.Link href="#pricing">Pricing</Nav.Link>
+          <Navbar.Brand href="#home">Genius </Navbar.Brand>
+          <Nav className="ms-auto">
             <Navbar.Toggle />
-            <Navbar.Collapse className=" ms-auto">
+            <Navbar.Collapse className=" justify-content-end">
+              <Nav.Link as={Link} to="/home#home">Home</Nav.Link>
+              <Nav.Link as={Link} to="/home#services">Services</Nav.Link>
+              <Nav.Link as={Link} to="/home#experts">Experts</Nav.Link>
+              <Nav.Link as={Link} to="/login">Login</Nav.Link>
+
               <Navbar.Text>
-                Signed in as: <a href="#login">Mark Otto</a>
+                Signed in as: <Link to="/login">Mark Otto</Link>
               </Navbar.Text>
             </Navbar.Collapse>
           </Nav>
